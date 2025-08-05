@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LaceLuxe Home Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+
+  <!-- Header -->
+<nav class="sticky top-0 z-50">
+<header class="bg-[#D9EAFD] shadow p-4 flex items-center justify-between relative">
+  <!-- Logo -->
+  <div class="flex items-center">
+    <h1 class="text-xl font-semibold text-[#7f1d1d]">LaceLuxe</h1>
+  </div>
+
+  <!-- Search Bar (tengah) -->
+  <div class="absolute left-1/2 transform -translate-x-1/2">
+    <div class="relative">
+      <input type="text" placeholder="Search" class="px-4 py-1 rounded-full border border-gray-300 w-80">
+      <svg class="w-4 h-4 absolute top-1/2 right-3 -translate-y-1/2 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
+      </svg>
+    </div>
+  </div>
+
+ 
+
+    <!-- Cart & Profile -->
+    <div class="flex items-center gap-4">
+      <!-- Cart -->
+      <div class="relative">
+        <a href="chart.html" class="relative block">
+          <img src="../img/keranjang.png" alt="Cart" class="w-6 h-6" />
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full px-1.5">1</span>
+        </a>
+      </div>
+
+      <!-- Profile Button -->
+      <div class="relative">
+        <button onclick="toggleProfilePopup()" class="w-8 h-8 rounded-full overflow-hidden border-2 border-[#6b3030]">
+          <img src="../img/3a6745f3-120e-4bd5-a701-d9deb1efbd86.jpeg" alt="Profil" class="w-full h-full object-cover" />
+        </button>
+      </div>
+    </div>
+  </header>
+</nav>
+
+<!-- Profile Popup -->
+<div id="profile-popup" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 hidden">
+  <div class="bg-white rounded-2xl p-8 shadow-lg w-80 relative">
+    <div class="flex flex-col items-center text-center">
+      <img src="../img/3a6745f3-120e-4bd5-a701-d9deb1efbd86.jpeg" alt="" class="w-20 h-20 rounded-full -mt-14 border-4 border-white shadow" />
+      <h2 class="text-lg font-semibold mt-4">zuramania1225</h2>
+      <p class="text-sm text-gray-500">zuramania1225@gmail.com</p>
+      <p class="text-sm mt-2">‪+62 89697627710‬</p>
+      <p class="text-sm text-gray-600 mb-4 text-center">Jl. Cisanggarung2 Rt.03 Rw.01 No.200</p>
+      <button onclick="logout()" class="bg-lime-200 hover:bg-lime-300 text-black font-semibold py-1 px-4 rounded-full">
+        Log Out
+      </button>
+    </div>
+  </div>
+</div>
+
+  <!-- Hero Image -->
+  <div>
+    <img src="../img/herosection.jpg" alt="Hiking boots" class="w-full h-[350px] object-cover">
+  </div>
+
+  <!-- Produk -->
+  <section class="p-4">
+    <div class="grid grid-cols-3 gap-4 mb-4" id="product-grid"></div>
+    <div class="flex justify-end">
+      <button class="bg-teal-200 p-2 rounded-full text-xl">&#10140;</button>
+    </div>
+  </section>
+
+<!-- Footer -->
+  <footer class=" bg-[#D9EAFD] text-center py-6 text-sm text-gray-600">
+    <div class=" flex justify-center gap-6 mb-2">
+      <a href="#"><img src="../img/images-removebg-preview.png" class="w-14 h-12" alt="Facebook"></a>
+      <a href="#"><img src="../img/instagram-social-media-icon-design-template-vector-png_127006-removebg-preview.png" class="w-14 h-14" alt="Instagram"></a>
+      <a href="#"><img src="../img/wa.png" class="w-12 h-12" alt="WhatsApp"></a>
+    </div>
+    <p>Copyright © 2025</p>
+  </footer>
+  
+
+<script src="../script/script.js"></script>
+</body>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LaceLuxe Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#ffffff]">
+
+  <!-- Header -->
+<nav class="sticky top-0 z-50">
+  <header class="bg-[#D9EAFD] shadow p-4 flex items-center justify-between ">
+    <div class="flex items-center gap-2">
+      <h1 class="text-xl font-semibold text-[#7f1d1d]">LaceLuxe</h1>
+    </div>
+
+    <!-- Search Bar (tengah) -->
+    <div class="absolute left-1/2 transform -translate-x-1/2">
+      <div class="relative">
+        <input type="text" placeholder="Search" class="px-4 py-1 rounded-full border border-gray-300 w-80">
+        <svg class="w-4 h-4 absolute top-1/2 right-3 -translate-y-1/2 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="text-sm space-x-4">
+      <a href="login.html" class="text-gray-700 hover:underline">Login</a>
+      <a href="register.html" class="text-gray-700 hover:underline">Register</a>
+    </div>
+  </header>
+</nav>
+
+  <!-- Hero Image -->
+  <div>
+    <img src="../img/herosection.jpg" alt="Hiking boots" class="w-full h-[350px] object-cover">
+  </div>
+
+
+
+  <!-- Content Section -->
+  <section class="bg-white text-center py-10 px-4">
+    <div class="max-w-md mx-auto">
+      <p class="text-sm text-gray-700  leading-6 mb-4">
+        ✨ Temukan Segalanya, Dalam Satu Tempat
+Dari fashion kekinian, gadget terbaru, hingga kebutuhan rumah tangga — semua ada di sini dengan harga bersaing dan kualitas terjamin.
+Nikmati pengalaman belanja yang mudah, cepat, dan aman. Plus, diskon spesial & gratis ongkir setiap hari!
+
+🛍️ Yuk, mulai belanja sekarang!
+      </p>
+    </div>
+  </section>
+
+    <!-- Features -->
+  <section class="bg-white py-8">
+    <div class="flex justify-center gap-16 text-center text-xs text-gray-700">
+      <div>
+        <img src="../img/10.png" class="w-32 h-auto" alt="">
+          <p class="mt-2 text-center text-sm text-gray-800">10 Days Return</p>
+      </div>
+      <div>
+        <img src="../img/secure.png" class="w-28 h-auto mt-2" alt="">
+          <p class="mt-4 text-center text-sm text-gray-800">Secure Payment</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner Section -->
+  <div class=" bg-[#D9EAFD] flex flex-col md:flex-row items-center justify-center px-6 py-12 gap-10">
+    <img src="../img/Group 189.png" alt="Model" class="w-72 md:w-96 object-cover">
+    <div class="max-w-md text-center md:text-left">
+      <p class="text-gray-700 text-base">
+        👟 Saatnya Melangkah dengan Gaya
+Upgrade gayamu dengan koleksi sepatu terbaru — dari sneakers kasual hingga sepatu formal, semua ada di sini!
+Nikmati diskon hingga 50%, penawaran khusus hanya untuk waktu terbatas.
+Nyaman dipakai, stylish dilihat!
+
+🛍️ Temukan Sepatu Favoritmu Sekarang!
+
+
+      </p>
+    </div>
+  </div>
+
+
+  
+    <!-- Produk -->
+  <section class="p-4">
+    <a href="../public/login.html">
+    <div class="grid grid-cols-3 gap-4 mb-4" id="product-grid"></div>
+    <div class="flex justify-end">
+    </div>
+    </a>
+  </section>
+      
+
+
+  <!-- Testimonials Section -->
+  <div class="bg-white py-10">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+      <!-- Testimonial -->
+      <div class="bg-white rounded-xl p-6 shadow-md text-sm text-gray-700">
+        <p>★★★★★</p>
+        <p class="mt-2"> “Awalnya ragu, tapi ternyata belanja di sini gampang banget. Produk lengkap, proses checkout cepat, dan barang sampai dengan aman. Sekarang jadi langganan tiap bulan!”
+— Nadia, Tangerang</p>
+      </div>
+      <!-- Duplicate testimonial 2x -->
+      <div class="bg-white rounded-xl p-6 shadow-md text-sm text-gray-700">
+        <p>★★★★★</p>
+        <p class="mt-2">“Buat yang suka cari promo dan belanja praktis, ini tempatnya! Tampilan websitenya user-friendly, banyak pilihan, dan pengirimannya juga cepat. Top banget!”
+— Rafi, Surabaya</p>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-md text-sm text-gray-700">
+        <p>★★★★★</p>
+        <p class="mt-2"> “Saya suka banget belanja di sini karena semua kategori produk ada. Dari kebutuhan harian sampai barang hobi, semua lengkap. Layanan pelanggannya juga responsif banget.”
+— Mega, Bandung
+</p>
+      </div>
+    </div>
+  </div>
+
+<!-- Footer -->
+  <footer class=" bg-[#D9EAFD] text-center py-6 text-sm text-gray-600">
+    <div class=" flex justify-center gap-6 mb-2">
+      <a href="#"><img src="../img/images-removebg-preview.png" class="w-14 h-12" alt="Facebook"></a>
+      <a href="#"><img src="../img/instagram-social-media-icon-design-template-vector-png_127006-removebg-preview.png" class="w-14 h-14" alt="Instagram"></a>
+      <a href="#"><img src="../img/wa.png" class="w-12 h-12" alt="WhatsApp"></a>
+    </div>
+    <p>Copyright © 2025</p>
+  </footer>
+  
+  <script src="../script/script.js"></script>
+</body>
+</html>

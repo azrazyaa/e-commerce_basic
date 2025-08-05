@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - LaceLuxe</title>
+  <script src="https://cdn.tailwindcss.com"></script> 
+</head>
+<body class="bg-gray-50">
+
+  <!-- Header -->
+  <nav class="sticky top-0 z-50 bg-[#D9EAFD] shadow">
+    <header class="p-4 flex items-center justify-between relative">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <h1 class="text-xl font-semibold text-[#7f1d1d]">LaceLuxe</h1>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="absolute left-1/2 transform -translate-x-1/2">
+        <div class="relative">
+          <input type="text" placeholder="Search" class="px-4 py-1 rounded-full border border-gray-300 w-80">
+          <svg class="w-4 h-4 absolute top-1/2 right-3 -translate-y-1/2 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Cart & Profile -->
+      <div class="flex items-center gap-4">
+        <div class="relative">
+          <a href="chart.html" class="relative block">
+            <img src="../img/keranjang.png" alt="Cart" class="w-6 h-6" />
+            <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full px-1.5">0</span>
+          </a>
+        </div>
+        <div class="relative">
+          <button onclick="toggleProfilePopup()" class="w-8 h-8 rounded-full overflow-hidden border-2 border-[#6b3030]">
+            <img src="../img/3a6745f3-120e-4bd5-a701-d9deb1efbd86.jpeg" alt="Profil" class="w-full h-full object-cover" />
+          </button>
+        </div>
+      </div>
+    </header>
+  </nav>
+
+  <!-- Profile Popup -->
+  <div id="profile-popup" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 hidden">
+    <!-- … sama persis dengan detail.html … -->
+  </div>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-2xl mx-auto">
+      <!-- Checkout Items -->
+      <div class="bg-white p-6 rounded-lg shadow mb-6">
+        <h2 class="text-xl font-semibold mb-4">Checkout Items</h2>
+        <ul id="checkout-items" class="space-y-4">
+          <!-- Items akan dimasukkan oleh JavaScript -->
+        </ul>
+      </div>
+
+      <!-- Payment Methods -->
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold mb-2">Metode Pembayaran</h3>
+        <div class="flex flex-wrap gap-4">
+          <button class="px-6 py-2 bg-blue-100 text-blue-600 rounded-lg" data-method="COD">COD</button>
+          <button class="px-6 py-2 bg-blue-100 text-blue-600 rounded-lg" data-method="Transfer Bank">Transfer Bank</button>
+          <button class="px-6 py-2 bg-blue-100 text-blue-600 rounded-lg" data-method="Tunai">Tunai</button>
+        </div>
+      </div>
+
+      <!-- Pricing Breakdown -->
+      <div class="bg-white p-6 rounded-lg shadow">
+        <div class="space-y-2">
+          <div class="flex justify-between">
+            <span>Subtotal untuk Produk</span>
+            <span id="subtotal">Rp 0.00</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Biaya Layanan</span>
+            <span>Rp 20</span>
+          </div>
+          <div class="flex justify-between text-green-600 font-semibold" id="selected-payment-method"></div>
+          <hr class="my-2">
+          <div class="flex justify-between font-bold text-lg">
+            <span>Total Pembayaran</span>
+            <span id="total-payment">Rp 0.00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Checkout Button -->
+      <button id="create-order-btn" class="mt-6 w-full bg-[#7f1d1d] text-white py-2 rounded hover:bg-red-300 transition">
+        Lanjutkan Pembayaran
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#D9EAFD] text-center py-6 text-sm text-gray-600">
+    <div class="flex justify-center gap-6 mb-2">
+      <a href="#"><img src="../img/images-removebg-preview.png" class="w-14 h-12" alt="Facebook"></a>
+      <a href="#"><img src="../img/instagram-social-media-icon-design-template-vector-png_127006-removebg-preview.png" class="w-14 h-14" alt="Instagram"></a>
+      <a href="#"><img src="../img/wa.png" class="w-12 h-12" alt="WhatsApp"></a>
+    </div>
+    <p>Copyright © 2025</p>
+  </footer>
+  <script src="../script/checkout.js"></script>
+  <script src="../script/description.js"></script>
+  <script>
+    function toggleProfilePopup() {
+      document.getElementById('profile-popup').classList.toggle('hidden');
+    }
+    function logout() {
+      alert("Logged out");
+      document.getElementById('profile-popup').classList.add('hidden');
+    }
+  </script>
+  <script src="../script/checkout.js"></script>
+</body>
+</html>

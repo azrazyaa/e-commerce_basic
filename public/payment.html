@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment - LaceLuxe</title>
+  <script src="https://cdn.tailwindcss.com"></script> 
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+
+  <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-6 text-center">Pilih Metode Pembayaran</h2>
+
+    <!-- Dropdown Metode Pembayaran -->
+    <div class="mb-6">
+      <label class="block text-sm font-medium text-gray-700 mb-2">Metode Pembayaran</label>
+      <select id="payment-method" class="w-full border border-gray-300 rounded-md p-2">
+        <option value="">-- Pilih Metode --</option>
+        <option value="e-wallet">E-Wallet</option>
+        <option value="bank-transfer">Transfer Bank</option>
+        <option value="cod">COD (Bayar di Tempat)</option>
+      </select>
+    </div>
+
+    <!-- Form E-Wallet -->
+    <div id="form-e-wallet" class="payment-form hidden">
+      <label class="block text-sm font-medium text-gray-700 mb-2">Pilih E-Wallet</label>
+      <div class="space-y-2">
+        <label class="flex items-center">
+          <input type="radio" name="e-wallet" value="gopay" class="mr-2">
+          Gopay
+        </label>
+        <label class="flex items-center">
+          <input type="radio" name="e-wallet" value="shopeepay" class="mr-2">
+          Shopeepay
+        </label>
+        <label class="flex items-center">
+          <input type="radio" name="e-wallet" value="dana" class="mr-2">
+          Dana
+        </label>
+        <label class="flex items-center">
+          <input type="radio" name="e-wallet" value="ovo" class="mr-2">
+          OVO
+        </label>
+      </div>
+    </div>
+
+    <!-- Form Transfer Bank -->
+    <div id="form-bank-transfer" class="payment-form hidden">
+      <label class="block text-sm font-medium text-gray-700 mb-2">Bank Tujuan</label>
+      <select class="w-full border border-gray-300 rounded-md p-2 mb-4">
+        <option>-- Pilih Bank --</option>
+        <option>BCA</option>
+        <option>Mandiri</option>
+        <option>BRI</option>
+        <option>BNI</option>
+      </select>
+      <input type="text" placeholder="Nomor Rekening Tujuan" class="w-full border border-gray-300 rounded-md p-2">
+    </div>
+
+    <!-- Form COD -->
+    <div id="form-cod" class="payment-form hidden">
+      <label class="block text-sm font-medium text-gray-700 mb-2">Alamat Pengiriman</label>
+      <textarea class="w-full border border-gray-300 rounded-md p-2" rows="3" placeholder="Masukkan alamat pengiriman"></textarea>
+    </div>
+
+    <!-- Tombol Bayar -->
+    <button id="pay-button" class="mt-6 w-full bg-[#7f1d1d] text-white py-2 rounded hover:bg-red-300 transition">
+      Bayar
+    </button>
+  </div>
+
+  <script src="../script/payment.js" defer></script>
+</body>
+</html>
